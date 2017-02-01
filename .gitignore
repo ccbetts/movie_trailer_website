@@ -1,7 +1,10 @@
-# Byte-compiled / optimized / DLL files
+﻿# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Compiled Python
+*.pyc
 
 # C extensions
 *.so
@@ -87,3 +90,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Sublime project stuff
+*.sublime-project
+*.sublime-workspace

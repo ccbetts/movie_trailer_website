@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {html_head}
+
+  <body class="body-fixed-navbar" style="padding-top: 54px">
+
+    <header class="navbar navbar-inverse fixed-top bg-fresh-tomatoes">
+      <a class="navbar-brand font-fresh-tomatoes" href="#">Fresh Tomatoes Movie Trailers</a>
+    </header>
+
+    <main class="main-content">
+      <div class="container-fluid">
+        <h1 class="sr-only">Fresh Tomatoes Movie Trailers</h1>
+        <div class="row">
+          {movie_html_components}
+        </div>
+      </div>
+    </main>
+
+    <aside id="trailer-video-container" class="modal fade">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 id="modal-movie-title" class="h4 modal-title"></h1>
+            <button id="close-video" type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          
+          <div class="modal-body">
+            <div id="embed-container" class="embed-responsive embed-responsive-16by9">
+              
+            </div>
+            <hr>
+            <p class="lead"><b>Summary: </b><span id="modal-movie-summary"></span></p>
+            <p>MPAA Rating: <b id="modal-movie-rating"></b></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+      {javascript}
+    </script>
+  </body>
+</html>
