@@ -94,3 +94,7 @@ ENV/
 # Sublime project stuff
 *.sublime-project
 *.sublime-workspace
+
+# HTML files, except those in templates directory
+*.html
+!templates/*.html
