@@ -6,7 +6,7 @@ import re
 import webbrowser
 
 with open('templates/site-template.html') as template_file:
-    # Read and import the external main page HTML file 
+    # Read and import the external main page HTML file
     main_page_html = template_file.read()
 
 with open('templates/html-head.html') as html_head_file:
@@ -22,10 +22,10 @@ with open('templates/main.js') as js_file:
     javascript = js_file.read()
 
 
-
-
 def get_youtube_video_id(youtube_url):
     """Extract the video ID from a YouTube video URL"""
+
+    # Regex URL-matching code provided by Udacity
     full_url_match = re.search(r'(?<=v=)[^&#]+', youtube_url)
     shortened_url_match = re.search(r'(?<=be/)[^&#]+', youtube_url)
     id_match = full_url_match or shortened_url_match
@@ -37,12 +37,19 @@ def get_youtube_video_id(youtube_url):
 
 
 def create_movie_snippet_content(movies):
+    """
+    Create and return the HTML for each movie provided.
+
+    Arguments:
+        movies: A list or tuple of `movie_trailer_website.Movie` instances.
+    """
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
         trailer_youtube_id = get_youtube_video_id(movie.youtube_trailer_url)
 
-        # Append the HTML snippet for the movie with its content filled in
+        # Append the HTML snippet for the movie (with its info filled in)
+        # to our string
         content += movie_snippet_html.format(
             movie_title=movie.title,
             movie_image_url=movie.image_url,

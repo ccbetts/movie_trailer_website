@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 try:
     from movie_trailer_website import Movie, create_and_open_webpage
 except ImportError:
-    # quick & dirty way of making Python recognize movie_trailer_website 
+    # quick & dirty way of making Python recognize movie_trailer_website
     # as a package in the event of an ImportError
     import sys
     from os.path import abspath, dirname
@@ -12,7 +12,7 @@ except ImportError:
     # add the top-level 'movie_trailer_site' directory to the
     # $PATH / %PATH% environment variable
     sys.path.append(dirname(dirname(abspath(__file__))))
-    
+
     from movie_trailer_website import Movie, create_and_open_webpage
 
 hacksaw_ridge = Movie(

@@ -49,7 +49,7 @@ class Movie(Media):
 
     def __init__(self, title, summary, image_url, youtube_trailer_url, rating):
         super(Movie, self).__init__(title, summary, image_url)
-        
+
         # `self.rating` is actually a property encapsulating the "true"
         # instance variable, which is `self._rating`. This is done to check
         # whether the rating is valid before setting it.
